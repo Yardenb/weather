@@ -8,7 +8,8 @@ const forecast = (lat, lng, cb)=>{
             cb('Unable to find the location')
         }else{
             cb(undefined, 
-                `${body.daily.data[0].summary}it is currently ${body.currently.temperature}, there is ${body.currently.precipProbability}% chance for rain`
+                `${body.daily.data[0].summary}it is currently ${body.currently.temperature}, there is ${body.currently.precipProbability}% chance for rain.
+                The high today is ${body.daily.data[0].temperatureHigh} and a low of ${body.daily.data[0].temperatureLow}`
                 )
         }
         
